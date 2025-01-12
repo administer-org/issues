@@ -6,6 +6,10 @@ on:
   pull_request:
     types: [opened, edited]
 
+permissions:
+    issues: write
+    pull-requests: write
+
 jobs:
   label:
     runs-on: ubuntu-latest
@@ -19,11 +23,3 @@ jobs:
         configuration-path: .github/labeler.yml
         enable-versioned-regex: 0
         repo-token: ${{ github.token }}
-        include-title: 0
-        include-body: 1
-        sync-labels: 0
-        issue-number: ${{ github.event.issue.number || github.event.pull_request.number }}
-
-permissions:
-  issues: write
-  pull-requests: write
