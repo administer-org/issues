@@ -1,22 +1,29 @@
-name: Auto-label issues
+name: Issue Labeler
 
 on:
-    issues:
-        types:
-            - opened
+  issues:
+    types: [opened, edited]
+  pull_request:
+    types: [opened, edited]
 
 jobs:
-    add-labels:
-        runs-on: ubuntu-latest
+  label:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-        steps:
-            - name: Check out repo
-              uses: actions/checkout@v3
+    - name: Run github/issue-labeler
+      uses: github/issue-labeler@v3.4
+      with:
+        configuration-path: .github/labeler.yml
+        enable-versioned-regex: 0
+        repo-token: ${{ github.token }}
+        include-title: 0
+        include-body: 1
+        sync-labels: 0
+        issue-number: ${{ github.event.issue.number || github.event.pull_request.number }}
 
-            - name: Auto label
-              uses: github/issue-labeler@v3.4
-              with:
-                configuration-path: .github/labeler.yml
-                enable-versioned-regex: 0
-                repo-token: ${{ github.token }}
-
+permissions:
+  issues: write
+  pull-requests: write
