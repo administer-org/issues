@@ -34,9 +34,9 @@ Steps to reproduce the behavior:
 
 A clear and concise description of what you expected to happen.
 
-**Actual behavor**
+**Actual behavior**
 
-A clear and consise description of what actually happened.
+A clear and concise description of what actually happened.
 
 **Screenshots or Videos**
 
