@@ -1,0 +1,11 @@
+administer:
+  - '- \[x] Administer'
+
+apps:
+  - '- \[x] Apps'
+
+ui components:
+  - '- \[x] UI Components'
+
+documentation:
+  - '- \[x] Documentation'

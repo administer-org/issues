@@ -1,16 +1,29 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Report a bug
 title: ''
-labels: ''
-assignees: ''
+labels: 'bug'
+assignees: 'FloofyPlasma, pyxfluff'
 
 ---
 
+<!-- Bug Reports MUST be filed in accordance with our contributing guidelines, found at https://github.com/administer-org/.github/blob/main/CONTRIBUTING.md We may close irrelevant reports which do not follow the format.-->
+
+**Impacted Products**
+
+Please check which products are impacted by this bug ([x]).
+
+- [ ] Administer
+- [ ] Apps
+- [ ] UI Components
+- [ ] Documentation
+
 **Describe the bug**
+
 A clear and concise description of what the bug is.
 
 **To Reproduce**
+
 Steps to reproduce the behavior:
 1. Go to '...'
 2. Click on '....'
@@ -18,21 +31,27 @@ Steps to reproduce the behavior:
 4. See error
 
 **Expected behavior**
+
 A clear and concise description of what you expected to happen.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Actual behavor**
+
+A clear and consise description of what actually happened.
+
+**Screenshots or Videos**
+
+If applicable, add media to help explain your problem.
 
 **Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+ - OS: [e.g. Studio, Windows]
+ - Roblox Version [eg. 517.92]
+ - Product Version (and commit hash if possible; administer tells you) [eg. 2.0.0-rc1; c86ac15]
+ 
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+**Code Snippets**
+
+If applicable, add any code snippets to reproduce the issue here.
 
 **Additional context**
+
 Add any other context about the problem here.

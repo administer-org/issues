@@ -1,0 +1,22 @@
+name: Auto-label issues
+
+on:
+    issues:
+        types:
+            - opened
+
+jobs:
+    add-labels:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out repo
+              uses: actions/checkout@v3
+
+            - name: Auto label
+              uses: github/issue-labeler@v3.4
+              with:
+                configuration-path: .github/labeler.yml
+                enable-versioned-regex: 0
+                repo-token: ${{ github.token }}
+
